@@ -1,15 +1,14 @@
-export const Individuals = async ({id}: {id: number}) => {
-
-  const dummy = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`).then((res) => res.json());
+export const Individuals = (async ({id}: {id: number}) => {
+  const dummy = await fetch(`https://jsonplaceholder.typicode.com/todos/${id}`).then((res) => res.json());
 
   return (
-    <>
-      <h2>Page at {id}!</h2>
-      <h3>By {dummy.userId}</h3>
-      <p>{dummy.title}</p>
-      <p>{dummy.body}</p>
-    </>
+    <section>
+      <h2>{dummy.title}</h2>
+      <p>By {dummy.userId} task</p>
+      <p>Task Num: {dummy.id}</p>
+      <p>{dummy.completed ? "This has been completed" : "This has not completed yet."}</p>
+    </section>
   );
-};
+});
 
 export default Individuals;

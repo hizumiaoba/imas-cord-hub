@@ -44,7 +44,7 @@ export default function Home() {
       <div>
         <Link href={`/${1}`}>
           <button type="button">
-            <a>Go to page 1</a>
+            Go to page 1
           </button>
         </Link>
       </div>
