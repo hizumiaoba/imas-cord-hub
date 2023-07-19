@@ -1,5 +1,7 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Image from "next/image";
+import styles from "./page.module.css";
+import { Suspense } from "react";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -15,7 +17,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            By{' '}
+            By{" "}
             <Image
               src="/vercel.svg"
               alt="Vercel Logo"
@@ -37,6 +39,14 @@ export default function Home() {
           height={37}
           priority
         />
+      </div>
+
+      <div>
+        <Link href={`/${1}`}>
+          <button type="button">
+            <a>Go to page 1</a>
+          </button>
+        </Link>
       </div>
 
       <div className={styles.grid}>
@@ -91,5 +101,5 @@ export default function Home() {
         </a>
       </div>
     </main>
-  )
+  );
 }
