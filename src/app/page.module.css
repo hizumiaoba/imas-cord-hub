@@ -27,3 +27,19 @@
 .section {
   padding: 1.5rem;
 }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  padding: 1rem;
+}
+
+.card {
+  background-color: rgb(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  color: rgb(255, 255, 255, 0.8);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1rem;
+}
