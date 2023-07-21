@@ -18,6 +18,12 @@ export const Recent = async () => {
           <h3>Card 2</h3>
           <p>Card 2</p>
         </a>
+
+        <a href="#" className={pageStyle.card}>
+          <h3>Card 3</h3>
+          <p>Card 3</p>
+        </a>
+
       </div>
     </div>
   )
