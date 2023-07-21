@@ -1,5 +1,7 @@
 import pageStyle from "@/app/page.module.css";
 import { About, FansiteList, OwnerNotice, Recent, ServerList } from "@/app/components/";
+import { Suspense } from 'react';
+import { Http2ServerRequest } from "http2";
 
 export default function Home() {
 
@@ -10,7 +12,9 @@ export default function Home() {
       </h1>
       <p className={pageStyle.description}>Discord server, Unofficial fansite, All in One.</p>
 
-      <Recent />
+      <Suspense fallback={<div><h2>Now Loading...</h2></div>}>
+        <Recent />
+      </Suspense>
 
       <ServerList />
 
