@@ -1,11 +1,12 @@
-import pageStyle from "@/app/page.module.css";
+import pageStyle from "@/app/css/shared.module.css";
+import PagesManifestPlugin from "next/dist/build/webpack/plugins/pages-manifest-plugin";
 
 export const Recent = async () => {
 
   return (
     <div className={`${pageStyle.section} ${pageStyle.sectionTitle} recently-added`}>
       <h2>Recently Added</h2>
-      <p style={{color: "rgb(255,255,255,0.7", fontSize: "0.8rem"}}>Shows Recently added to this site.</p>
+      <p className={`${pageStyle.description}`}>Shows Recently added to this site.</p>
 
       <div className={pageStyle.grid}>
 
