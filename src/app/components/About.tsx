@@ -7,8 +7,7 @@ export const About = async () => {
         <h2>About</h2>
 
         <p>
-          ImasCordHub is the unofficial union site of the Discord server and
-          fansite of the game "THE IDOLM@STER" series.
+          「ImasCordHub」は、アイドルマスターシリーズのDiscordサーバーと非公式ファンサイトをまとめた非公式のポータルサイトです。
         </p>
       </div>
     </>

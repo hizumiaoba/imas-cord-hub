@@ -1,5 +1,4 @@
 import pageStyle from "@/app/css/shared.module.css";
-import Link from "next/link";
 import { Gridset } from './Gridset';
 import { Suspense } from "react";
 
