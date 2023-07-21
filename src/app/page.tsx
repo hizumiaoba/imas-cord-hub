@@ -1,7 +1,8 @@
 import pageStyle from "@/app/page.module.css";
 import { About, FansiteList, OwnerNotice, Recent, ServerList } from "@/app/components/";
 import { Suspense } from 'react';
-import { Http2ServerRequest } from "http2";
+
+const fallbackElement = <div><h2>Now Loading...</h2></div>;
 
 export default function Home() {
 
@@ -12,17 +13,25 @@ export default function Home() {
       </h1>
       <p className={pageStyle.description}>Discord server, Unofficial fansite, All in One.</p>
 
-      <Suspense fallback={<div><h2>Now Loading...</h2></div>}>
+      <Suspense fallback={fallbackElement}>
         <Recent />
       </Suspense>
 
-      <ServerList />
+      <Suspense fallback={fallbackElement}>
+        <ServerList />
+      </Suspense>
 
-      <FansiteList />
+      <Suspense fallback={fallbackElement}>
+        <FansiteList />
+      </Suspense>
 
-      <About />
+      <Suspense fallback={fallbackElement}>
+        <About />
+      </Suspense>
 
-      <OwnerNotice />
+      <Suspense fallback={fallbackElement}>
+        <OwnerNotice />
+      </Suspense>
     </>
   );
 }
