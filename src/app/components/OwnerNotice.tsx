@@ -1,6 +1,5 @@
-import pageStyle from "@/app/page.module.css";
-import { isMobile } from "react-device-detect";
-import { NonMobileSubmissionForm, MobileSubmissionForm } from "@/app/components/";
+import pageStyle from "@/app/css/shared.module.css";
+import aboutStyle from '@/app/css/about.module.css'
 import Link from "next/link";
 
 const style = {
@@ -21,9 +20,12 @@ export const OwnerNotice = async () => {
       >
         <h2>For owners</h2>
 
-        <p>
-          If you are the owner of the Discord server or fansite and want to
-          register, please use the form below.
+        <p className={aboutStyle.paras}>
+          もし、あなたがアイマスのファンサイトやDiscordサーバーのオーナーでこのサイトへ掲載を希望する場合は、以下のリンクより登録をお願いします。
+        </p>
+
+        <p className={aboutStyle.paras}>
+          送信された内容はサイト管理者によって確認され、問題がない場合は掲載されます。
         </p>
 
         <button type="button" style={style}>
@@ -32,10 +34,17 @@ export const OwnerNotice = async () => {
           </Link>
         </button>
 
-        <p>
-          And we strongly appreciate if you can put the link to this site on
-          your server or site.
+        <p className={aboutStyle.paras}>
+          また、貴方さまのサイトやDiscordサーバーにてこのサイトを紹介していただけると幸いです。
         </p>
+
+        <div>
+          <button type="button" style={style}>
+            <Link href={"https://twitter.com/intent/tweet?text=ImasCordHub%20-%20Discord%20server%2C%20Unofficial%20fansite%2C%20All%20in%20One.%0Ahttps%3A%2F%2Fimas-cord-hub.vercel.app%2F"} style={{color: "black", textDecorationLine: "none"}}>
+              Share on Twitter
+            </Link>
+          </button>
+        </div>
 
       </div>
     </>
