@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&display=swap');
+
+.sectionTitle {
+  font-family: 'JetBrains Mono', 'Zen Maru Gothic', monospace;
+}
+
+.section {
+  padding: 0.5rem;
+}
+
+.section .description {
+  color: rgb(255, 255, 255, 0.7);
+  font-size: 12px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.card {
+  /* for mobile card */
+  background-color: #1f1f1f;
+  border-radius: var(--border-radius);
+  color: #fff;
+  text-decoration-line: none;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 300px;
+  width: 360px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+  text-align: center;
+}
+
+.card p {
+  text-align: left;
+  padding: 0 20px;
+  width: 320px;
+}
+
+.card div {
+  width: 300px;
+  margin: auto 0;
+  align-self: center;
+}
+
+.card button {
+  width: 120px;
+  flex-shrink: 0;
+  font-family: "JetBrains Mono";
+  color: black;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 10px;
+  padding: 15px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    padding: 1.5rem 3rem;
+  }
+
+  .grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 700px;
+  }
+
+  .card p {
+    width: 680px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .section {
+    padding: 1.5rem 5rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 10rem;
+    margin-top: 0.5rem;
+  }
+
+  .card {
+    width: 560px;
+  }
+
+  .card p {
+    width: 520px;
+  }
+}
