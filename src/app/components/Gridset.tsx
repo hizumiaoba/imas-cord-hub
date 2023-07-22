@@ -29,3 +29,4 @@ export const Gridset = async ({ arr }: {arr: Array<serverType>}) => {
       </div>
   );
 }
+
