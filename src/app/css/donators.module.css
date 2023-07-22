@@ -1,0 +1,31 @@
+.navigater {
+  width: 120px;
+  flex-shrink: 0;
+  font-family: "JetBrains Mono";
+  color: black;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 10px;
+  padding: 15px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+.titleSection {
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  gap: 3rem;
+}
+
+@media screen and (min-width : 768px) {
+  .titleSection {
+    gap: 7rem;
+  }
+}
+
+@media screen and (min-width : 1440px) {
+  .titleSection {
+    justify-content: space-evenly;
+  }
+}
