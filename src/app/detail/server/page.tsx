@@ -1,4 +1,5 @@
-export const home = () => {
+import { GridComponent } from '../GridComponent';
+export default function Home() {
 
   
 
@@ -11,7 +12,7 @@ export const home = () => {
       </p>
 
       <div>
-        
+        <GridComponent type="server" />
       </div>
     </>
   )
