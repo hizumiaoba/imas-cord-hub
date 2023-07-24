@@ -18,7 +18,7 @@ Please refer to the [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelin
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [AGPLv3 License](LICENSE).
 
 ## Sponsoring
 
