@@ -2,13 +2,14 @@ import pageStyle from "@/app/css/shared.module.css";
 import { Suspense } from "react";
 import { Gridset } from './Gridset';
 import { serverType } from "../interfaces/server.interface";
+import { dummyServer } from "../interfaces/dummy";
 
 export const ServerList = async () => {
   
   const dummy1 = await fetch('https://jsonplaceholder.typicode.com/todos/2').then((res) => res.json())
   const dummy2 = await fetch('https://jsonplaceholder.typicode.com/todos/1').then((res) => res.json())
   
-  const arr = [dummy1, dummy2]
+  const arr = dummyServer;
 
   return (
     <>

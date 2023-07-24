@@ -1,13 +1,14 @@
 import pageStyle from "@/app/css/shared.module.css";
 import { Gridset } from './Gridset';
 import { Suspense } from "react";
+import { dummyFansite, dummyServer } from "../interfaces/dummy";
 
 export const Recent = async () => {
 
-  const recentServerAdded = await fetch('https://jsonplaceholder.typicode.com/todos/1').then((res) => res.json());
-  const recentFansiteAdded = await fetch('https://jsonplaceholder.typicode.com/todos/2').then((res) => res.json());
-
-  const arr = [recentServerAdded, recentFansiteAdded];
+  const arr = [
+    dummyServer[0],
+    dummyFansite[0],
+  ]
 
   return (
     <div
