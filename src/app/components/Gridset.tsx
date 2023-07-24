@@ -1,8 +1,7 @@
 import pageStyle from "@/app/css/shared.module.css";
 import { serverType } from "../interfaces/server.interface";
-import Link from "next/link";
-import { selectIpColor } from "../utils";
 import { fansiteType } from "../interfaces/fansite.interface";
+import { createFansiteElement, createServerElement } from "../detail/GridComponent";
 
 export const Gridset = async ({
   arr,
@@ -18,61 +17,6 @@ export const Gridset = async ({
           return createFansiteElement(item);
         }
       })}
-    </div>
-  );
-};
-
-const createServerElement = (item: serverType) => {
-  return (
-    <div key={item.id} className={pageStyle.card}>
-      <h3>Title: {item.name}</h3>
-      <p>{item.description}</p>
-      <div className={pageStyle.ip}>
-        <span style={{ background: `${selectIpColor(item.ip)}` }}>
-          {item.ip}
-        </span>
-      </div>
-      <div className={pageStyle.waifu}>
-        {item.waifu?.map((w, i) => (
-          <span key={i}>{w}</span>
-        ))}
-      </div>
-      <div>
-        <Link href={"#"}>
-          <button type="button" style={{ backgroundColor: "d9d9d9" }}>
-            <span>Detail</span>
-          </button>
-        </Link>
-        <Link href={item.invite}>
-          <button type="button" style={{ background: "#56AEFF" }}>
-            <span>Join!</span>
-          </button>
-        </Link>
-      </div>
-    </div>
-  );
-};
-
-const createFansiteElement = (item: fansiteType) => {
-  return (
-    <div key={item.id} className={pageStyle.card}>
-      <h3>Title: {item.name}</h3>
-      <p>{item.description}</p>
-      <div className={pageStyle.waifu}>
-        <span>{item.waifu}</span>
-      </div>
-      <div>
-        <Link href={"#"}>
-          <button type="button" style={{ backgroundColor: "d9d9d9" }}>
-            <span>Detail</span>
-          </button>
-        </Link>
-        <Link href={item.link}>
-          <button type="button" style={{ background: "#56AEFF" }}>
-            <span>Visit!</span>
-          </button>
-        </Link>
-      </div>
     </div>
   );
 };

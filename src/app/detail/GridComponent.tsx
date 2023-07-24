@@ -22,9 +22,9 @@ export const GridComponent = async ({
       <div className={`${sharedStyle.grid}`}>
         {arr.map((item: any) => {
           if (type === "server") {
-            return createServerElement(type, item);
+            return createServerElement(item);
           } else if (type === "fansite") {
-            return createFansiteElement(type, item);
+            return createFansiteElement(item);
           } else {
             return <></>;
           }
@@ -39,10 +39,10 @@ const btnStyle = {
   width: "90%",
 };
 
-const createServerElement = (tyoe: string, item: serverType) => {
+export const createServerElement = (item: serverType) => {
   return (
     <div key={item.id} className={sharedStyle.card}>
-      <h3>Title: {item.name}</h3>
+      <h3>{item.name}</h3>
       <p>{item.description}</p>
       <div className={sharedStyle.ip}>
         <span style={{ background: `${selectIpColor(item.ip)}` }}>
@@ -65,10 +65,10 @@ const createServerElement = (tyoe: string, item: serverType) => {
   );
 };
 
-const createFansiteElement = (tyoe: string, item: fansiteType) => {
+export const createFansiteElement = (item: fansiteType) => {
   return (
     <div key={item.id} className={sharedStyle.card}>
-      <h3>Title: {item.name}</h3>
+      <h3>{item.name}</h3>
       <p>{item.description}</p>
       <div className={sharedStyle.waifu}>
         <span>{item.waifu}</span>
