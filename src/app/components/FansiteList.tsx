@@ -1,11 +1,11 @@
 import pageStyle from "@/app/css/shared.module.css";
 import { Suspense } from "react";
 import { Gridset } from "./Gridset";
-import { dummyFansite } from "../interfaces/dummy";
 import Link from "next/link";
+import { baseApiUrl } from "../utils";
 
 export const FansiteList = async () => {
-  const arr = dummyFansite;
+  const arr = await fetch(`${baseApiUrl}/fansite/find/random?amount=2`).then((res) => res.json());
 
   return (
     <>

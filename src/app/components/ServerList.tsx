@@ -1,12 +1,11 @@
 import pageStyle from "@/app/css/shared.module.css";
 import { Suspense } from "react";
 import { Gridset } from "./Gridset";
-import { serverType } from "../interfaces/server.interface";
-import { dummyServer } from "../interfaces/dummy";
 import Link from "next/link";
+import { baseApiUrl } from "../utils";
 
 export const ServerList = async () => {
-  const arr = dummyServer;
+  const arr = await fetch(`${baseApiUrl}/server/find/random?amount=2`).then((res) => res.json());
 
   return (
     <>
