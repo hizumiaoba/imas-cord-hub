@@ -1,32 +1,22 @@
-import pageStyle from '@/app/css/shared.module.css'
+import pageStyle from "@/app/css/shared.module.css";
 import { serverType } from "../interfaces/server.interface";
-import Link from 'next/link';
+import { fansiteType } from "../interfaces/fansite.interface";
+import { createFansiteElement, createServerElement } from "../detail/GridComponent";
 
-export const Gridset = async ({ arr }: {arr: Array<serverType>}) => {
-  
+export const Gridset = async ({
+  arr,
+}: {
+  arr: Array<serverType | fansiteType>;
+}) => {
   return (
     <div className={pageStyle.grid}>
-        {arr.map((c, i) => (
-          <div key={i} className={pageStyle.card}>
-            <h3>Title: {c.title} {i + 1}</h3>
-            <p>
-              {c.title} {c.title} {c.title}
-            </p>
-            <div>
-              <Link href={"#"}>
-                <button type="button" style={{ backgroundColor: "d9d9d9" }}>
-                  <span>Detail</span>
-                </button>
-              </Link>
-              <Link href={"#"}>
-                <button type="button" style={{ background: "#56AEFF" }}>
-                  <span>Join!</span>
-                </button>
-              </Link>
-            </div>
-          </div>
-        ))}
-      </div>
+      {arr.map((item) => {
+        if ("ip" in item) {
+          return createServerElement(item);
+        } else {
+          return createFansiteElement(item);
+        }
+      })}
+    </div>
   );
-}
-
+};

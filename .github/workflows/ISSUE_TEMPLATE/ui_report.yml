@@ -1,0 +1,50 @@
+name: 画面表示（UI）不具合の報告
+description: サイト閲覧時に画面表示が崩れる、本来見えるボタンが見えないなどの表示に関連する不具合はこちらからご報告ください。
+title: '[UI]: '
+labels:
+  - 'bug'
+  - 'ui'
+  - 'needs-triage'
+assignees:
+  - hizumiaoba
+body:
+  - type: markdown
+    attributes:
+      value: |
+        この度は表示上の不具合をご報告いただきありがとうございます。
+
+        画面表示という特性上、様々な環境によって差異がございますため、以下の情報を正確にご記入ください。
+  - type: dropdown
+    attributes:
+      id: browser
+      label: ブラウザ
+      description: ご利用のブラウザを選択してください。
+      options:
+        - Google Chrome
+        - Microsoft Edge
+        - Mozilla Firefox
+        - Safari
+        - その他
+      validation:
+        required: true
+  - type: input
+    attributes:
+      id: browser-version
+      label: ブラウザのバージョン
+      description: ご利用のブラウザのバージョンをご記入ください。（調べ方が分からないなどの場合は空欄で結構です）
+      placeholder: 例）89.0.4389.90
+  - type: textarea
+    attribute:
+      id: bug-description
+      label: 不具合の説明
+      description: 不具合の内容を文章で説明できる限り正確にご記入ください。
+  - type: textarea
+    attribute:
+      id: bug-steps
+      label: 不具合の再現手順
+      description: 不具合を再現するための手順をご記入ください。
+  - type: textarea
+    attribute:
+      id: bug-screenshot
+      label: 不具合のスクリーンショット
+      description: 不具合が発生した際のスクリーンショットを添付してください。（画像のコピー後このエリアにペーストすることで貼り付けることができます）

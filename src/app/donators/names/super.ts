@@ -1,3 +1,1 @@
-export const supers: Array<string> = [
-
-];
+export const supers: Array<string> = [];

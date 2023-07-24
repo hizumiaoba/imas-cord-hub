@@ -1,3 +1,1 @@
-export const normal: Array<string> = [
-  
-];
+export const normal: Array<string> = [];
