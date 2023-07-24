@@ -3,11 +3,9 @@ import { Suspense } from "react";
 import { Gridset } from './Gridset';
 import { serverType } from "../interfaces/server.interface";
 import { dummyServer } from "../interfaces/dummy";
+import Link from "next/link";
 
 export const ServerList = async () => {
-  
-  const dummy1 = await fetch('https://jsonplaceholder.typicode.com/todos/2').then((res) => res.json())
-  const dummy2 = await fetch('https://jsonplaceholder.typicode.com/todos/1').then((res) => res.json())
   
   const arr = dummyServer;
 
@@ -24,6 +22,7 @@ export const ServerList = async () => {
         <Suspense fallback={<div><h3>Requesting data...</h3></div>}>
           <Gridset arr={arr} />
         </Suspense>
+        <p><Link href={'/detail/server'}>全て見てみる!</Link></p>
       </div>
     </>
   );

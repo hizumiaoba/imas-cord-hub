@@ -3,13 +3,10 @@ import sharedStyle from '@/app/css/shared.module.css';
 import { fansiteType } from '../interfaces/fansite.interface';
 import { serverType } from '../interfaces/server.interface';
 import { baseApiUrl, selectIpColor } from '../utils';
-import { dummyServer } from '../interfaces/dummy';
+import { dummyFansite, dummyServer } from '../interfaces/dummy';
 import style from '@/app/css/about.module.css';
 
-export const GridComponent = async ({ type }: { type: 'server' | 'fansite' }) => {
-
-  // const data = await fetch(`${baseApiUrl}/${type}`).then(res => res.json());
-  const data = dummyServer;
+export const GridComponent = async ({ type, arr }: { type: 'server' | 'fansite', arr: Array<any> }) => {
 
   return (
     <div className={`${sharedStyle.section} ${sharedStyle.sectionTitle}`}>
@@ -18,7 +15,7 @@ export const GridComponent = async ({ type }: { type: 'server' | 'fansite' }) =>
       <p>List up all {type}.</p>
 
       <div className={`${sharedStyle.grid}`}>
-        {data.map((item: any) => {
+        {arr.map((item: any) => {
           if (type === 'server') {
             return createServerElement(type, item);
           } else if (type === 'fansite') {

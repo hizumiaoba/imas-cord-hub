@@ -1,12 +1,12 @@
 import { GridComponent } from '../GridComponent';
-import { dummyServer } from '@/app/interfaces/dummy';
+import { dummyFansite } from '@/app/interfaces/dummy';
 export default function Home() {
 
-  const data = dummyServer;
+  const data = dummyFansite
 
   return (
         <GridComponent
-          type="server"
+          type="fansite"
           arr={data}
         />
   )

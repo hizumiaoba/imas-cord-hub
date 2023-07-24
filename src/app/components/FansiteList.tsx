@@ -2,11 +2,9 @@ import pageStyle from "@/app/css/shared.module.css";
 import { Suspense } from "react";
 import { Gridset } from "./Gridset";
 import { dummyFansite } from "../interfaces/dummy";
+import Link from "next/link";
 
 export const FansiteList = async () => {
-
-  const dummy1 = await fetch('https://jsonplaceholder.typicode.com/todos/2').then((res) => res.json())
-  const dummy2 = await fetch('https://jsonplaceholder.typicode.com/todos/1').then((res) => res.json())
 
   const arr = dummyFansite;
 
@@ -23,6 +21,7 @@ export const FansiteList = async () => {
         <Suspense fallback={<div><h3>Requesting data...</h3></div>}>
           <Gridset arr={arr} />
         </Suspense>
+        <p><Link href={'/detail/fansite'}>全て見てみる!</Link></p>
       </div>
     </>
   );
