@@ -4,8 +4,11 @@ import Link from "next/link";
 import { selectIpColor } from "../utils";
 import { fansiteType } from "../interfaces/fansite.interface";
 
-export const Gridset = async ({ arr }: { arr: Array<serverType | fansiteType> }) => {
-
+export const Gridset = async ({
+  arr,
+}: {
+  arr: Array<serverType | fansiteType>;
+}) => {
   return (
     <div className={pageStyle.grid}>
       {arr.map((item) => {
@@ -14,22 +17,20 @@ export const Gridset = async ({ arr }: { arr: Array<serverType | fansiteType> })
         } else {
           return createFansiteElement(item);
         }
-      }
-      )}
+      })}
     </div>
-  )
-  
+  );
 };
 
 const createServerElement = (item: serverType) => {
   return (
     <div key={item.id} className={pageStyle.card}>
-      <h3>
-        Title: {item.name}
-      </h3>
+      <h3>Title: {item.name}</h3>
       <p>{item.description}</p>
       <div className={pageStyle.ip}>
-        <span style={{ background: `${selectIpColor(item.ip)}` }}>{item.ip}</span>
+        <span style={{ background: `${selectIpColor(item.ip)}` }}>
+          {item.ip}
+        </span>
       </div>
       <div className={pageStyle.waifu}>
         {item.waifu?.map((w, i) => (
@@ -55,9 +56,7 @@ const createServerElement = (item: serverType) => {
 const createFansiteElement = (item: fansiteType) => {
   return (
     <div key={item.id} className={pageStyle.card}>
-      <h3>
-        Title: {item.name}
-      </h3>
+      <h3>Title: {item.name}</h3>
       <p>{item.description}</p>
       <div className={pageStyle.waifu}>
         <span>{item.waifu}</span>
@@ -75,5 +74,5 @@ const createFansiteElement = (item: fansiteType) => {
         </Link>
       </div>
     </div>
-  )
+  );
 };

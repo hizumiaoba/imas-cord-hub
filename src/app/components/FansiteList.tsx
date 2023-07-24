@@ -5,7 +5,6 @@ import { dummyFansite } from "../interfaces/dummy";
 import Link from "next/link";
 
 export const FansiteList = async () => {
-
   const arr = dummyFansite;
 
   return (
@@ -18,10 +17,18 @@ export const FansiteList = async () => {
           Shows fansites that are registered on this site.
         </p>
 
-        <Suspense fallback={<div><h3>Requesting data...</h3></div>}>
+        <Suspense
+          fallback={
+            <div>
+              <h3>Requesting data...</h3>
+            </div>
+          }
+        >
           <Gridset arr={arr} />
         </Suspense>
-        <p><Link href={'/detail/fansite'}>全て見てみる!</Link></p>
+        <p>
+          <Link href={"/detail/fansite"}>全て見てみる!</Link>
+        </p>
       </div>
     </>
   );

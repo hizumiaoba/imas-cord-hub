@@ -1,5 +1,5 @@
 import pageStyle from "@/app/css/shared.module.css";
-import aboutStyle from '@/app/css/about.module.css'
+import aboutStyle from "@/app/css/about.module.css";
 import Link from "next/link";
 
 const style = {
@@ -10,7 +10,7 @@ const style = {
   borderRadius: "10px",
   margin: "10px",
   padding: "15px",
-}
+};
 
 export const OwnerNotice = async () => {
   return (
@@ -29,7 +29,10 @@ export const OwnerNotice = async () => {
         </p>
 
         <button type="button" style={style}>
-          <Link href={"https://forms.gle/tDhLwWGgU7ajgyjJ8"} style={{color: "black", textDecorationLine: "none"}}>
+          <Link
+            href={"https://forms.gle/tDhLwWGgU7ajgyjJ8"}
+            style={{ color: "black", textDecorationLine: "none" }}
+          >
             Register!
           </Link>
         </button>
@@ -40,12 +43,16 @@ export const OwnerNotice = async () => {
 
         <div>
           <button type="button" style={style}>
-            <Link href={"https://twitter.com/intent/tweet?text=ImasCordHub%20-%20Discord%20server%2C%20Unofficial%20fansite%2C%20All%20in%20One.%0Ahttps%3A%2F%2Fimas-cord-hub.vercel.app%2F"} style={{color: "black", textDecorationLine: "none"}}>
+            <Link
+              href={
+                "https://twitter.com/intent/tweet?text=ImasCordHub%20-%20Discord%20server%2C%20Unofficial%20fansite%2C%20All%20in%20One.%0Ahttps%3A%2F%2Fimas-cord-hub.vercel.app%2F"
+              }
+              style={{ color: "black", textDecorationLine: "none" }}
+            >
               Share on Twitter
             </Link>
           </button>
         </div>
-
       </div>
     </>
   );

@@ -1,4 +1,10 @@
-export const NameComponent = async ({ title, arr }: { title: string, arr: Array<string> }) => {
+export const NameComponent = async ({
+  title,
+  arr,
+}: {
+  title: string;
+  arr: Array<string>;
+}) => {
   return (
     <>
       <h2>{title}</h2>
@@ -7,13 +13,9 @@ export const NameComponent = async ({ title, arr }: { title: string, arr: Array<
 
       <ul>
         {arr.map((name, index) => {
-          return (
-            <li key={index}>
-              {name}
-            </li>
-          )
+          return <li key={index}>{name}</li>;
         })}
       </ul>
     </>
-  )
+  );
 };

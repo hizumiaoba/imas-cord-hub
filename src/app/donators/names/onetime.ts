@@ -1,3 +1,1 @@
-export const onetime: Array<string> = [
-
-];
+export const onetime: Array<string> = [];
