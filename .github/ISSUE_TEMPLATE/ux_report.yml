@@ -9,10 +9,11 @@ assignees:
   - hizumiaoba
 body:
   - type: markdown
-    value: |
-      このたびは不具合をご報告いただきありがとうございます。
+    attributes:
+      value: |
+        このたびは不具合をご報告いただきありがとうございます。
 
-      以下の項目にご記入いただき、ご報告をお願いいたします。
+        以下の項目にご記入いただき、ご報告をお願いいたします。
   - type: textarea
     id: description
     attributes:
