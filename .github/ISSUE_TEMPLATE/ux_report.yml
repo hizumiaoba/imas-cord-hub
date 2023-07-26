@@ -3,7 +3,7 @@ description: ボタン押下時など本来画面推移などが発生する場�
 title: '[UX]: '
 labels:
   - 'bug'
-  - 'UX'
+  - 'ux'
   - 'needs-triage'
 assignees:
   - hizumiaoba
