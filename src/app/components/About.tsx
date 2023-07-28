@@ -63,6 +63,27 @@ export const About = async () => {
           </a>{" "}
           にてお願いいたします。
         </p>
+
+        <p>
+          このサイトは、分類上「アイドルマスター」シリーズのファンコンテンツとしています。制作にあたっては以下のガイドラインを遵守しています。
+          <ul>
+            <li>
+              <a href="https://www.bandainamcoent.co.jp/info/privacy/">
+                バンダイナムコエンターテインメントプライバシーポリシー
+              </a>
+            </li>
+            <li>
+              <a href="https://www.bandainamcoent.co.jp/info/videopolicy/">
+                バンダイナムコエンターテインメントコンテンツ利用ポリシー
+              </a>
+            </li>
+            <li>
+              <a href="https://starlit-season.idolmaster.jp/game_commentary_policy/">
+                アイドルマスター スターリットシーズン ゲームコンテンツ利用ポリシー
+              </a>
+            </li>
+          </ul>
+        </p>
       </div>
     </>
   );
