@@ -1,10 +1,13 @@
 import pageStyle from "@/app/css/shared.module.css";
 import { Gridset } from "./Gridset";
 import { Suspense } from "react";
-import { dummyFansite, dummyServer } from "../interfaces/dummy";
+import { baseApiUrl } from "../utils";
 
 export const Recent = async () => {
-  const arr = [dummyServer[0], dummyFansite[0]];
+  const arr = [
+    await fetch(`${baseApiUrl}/server/find/latest`).then((res) => res.json()),
+    await fetch(`${baseApiUrl}/fansite/find/latest`).then((res) => res.json()),
+  ];
 
   return (
     <div

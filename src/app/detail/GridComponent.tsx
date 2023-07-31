@@ -71,7 +71,7 @@ export const createFansiteElement = (item: fansiteType) => {
       <h3>{item.name}</h3>
       <p>{item.description}</p>
       <div className={sharedStyle.waifu}>
-        <span>{item.waifu}</span>
+        <span>{item.waifu ? item.waifu : ""}</span>
       </div>
       <div>
         <Link href={item.link}>

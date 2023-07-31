@@ -1,7 +1,7 @@
+import { baseApiUrl } from "@/app/utils";
 import { GridComponent } from "../GridComponent";
-import { dummyServer } from "@/app/interfaces/dummy";
-export default function Home() {
-  const data = dummyServer;
+export default async function Home() {
+  const data = await fetch(`${baseApiUrl}/server`).then((res) => res.json());
 
   return <GridComponent type="server" arr={data} />;
 }

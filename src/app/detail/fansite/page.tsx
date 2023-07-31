@@ -1,7 +1,12 @@
+import { Suspense } from "react";
 import { GridComponent } from "../GridComponent";
-import { dummyFansite } from "@/app/interfaces/dummy";
-export default function Home() {
-  const data = dummyFansite;
+import { baseApiUrl } from "@/app/utils";
+export default async function Home() {
+  const data = await fetch(`${baseApiUrl}/fansite`).then((res) => res.json());
 
-  return <GridComponent type="fansite" arr={data} />;
+  return (
+    <Suspense fallback={<h1>Now loadning...</h1>}>
+      <GridComponent type="fansite" arr={data} />
+    </Suspense>
+  );
 }
