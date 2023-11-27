@@ -7,10 +7,12 @@ version: 2
 updates:
   - package-ecosystem: "npm" # See documentation for possible values
     directory: "/" # Location of package manifests
+    target-branch: trunk
     schedule:
       interval: "daily"
     assignees:
       - hizumiaoba
     reviewers:
       - hizumiaoba
-    open-pull-requests-limit: 10
+    open-pull-requests-limit: 20
+
