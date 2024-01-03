@@ -1,4 +1,4 @@
-export const baseApiUrl = 'https://imascordhub-backend.onrender.com';
+export const baseApiUrl = 'https://imas-cord-hub-api.vercel.app/api';
 
 export const selectIpColor = (ip: string): string => {
   switch (ip) {
