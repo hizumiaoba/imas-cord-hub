@@ -2,10 +2,12 @@ import pageStyle from "@/app/css/shared.module.css";
 import { Suspense } from "react";
 import { Gridset } from "./Gridset";
 import Link from "next/link";
-import { baseApiUrl } from "../utils";
+import {baseApiUrl, getRandomPickedArray} from "../utils";
+import {fansiteType} from "@/app/interfaces/fansite.interface";
 
 export const FansiteList = async () => {
-  const arr = await fetch(`${baseApiUrl}/fansite/find/random?amount=2`).then((res) => res.json());
+  const arr: Array<fansiteType> = await fetch(`${baseApiUrl}/fansites`).then((res) => res.json()) as Array<fansiteType>;
+  const randomPicked: Array<fansiteType> = getRandomPickedArray(arr, 1);
 
   return (
     <>
@@ -24,7 +26,7 @@ export const FansiteList = async () => {
             </div>
           }
         >
-          <Gridset arr={arr} />
+          <Gridset arr={randomPicked} />
         </Suspense>
         <p>
           <Link href={"/detail/fansite"}>全て見てみる!</Link>
