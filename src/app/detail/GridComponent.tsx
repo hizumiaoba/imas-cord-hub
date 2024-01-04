@@ -43,6 +43,7 @@ export const createServerElement = (item: serverType) => {
   return (
     <div key={item.id} className={sharedStyle.card}>
       <h3>{item.name}</h3>
+      <img src={item.splash} height={100} width={100} style={{alignSelf: "center"}}/>
       <p>{item.description}</p>
       <div className={sharedStyle.ip}>
         <span style={{ background: `${selectIpColor(item.ip)}` }}>

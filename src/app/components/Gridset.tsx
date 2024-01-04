@@ -10,7 +10,7 @@ export const Gridset = async ({
 }) => {
   return (
     <div className={pageStyle.grid}>
-      {arr.map((item) => {
+      {arr.filter((item: serverType | fansiteType) => item != undefined).map((item) => {
         if ("ip" in item) {
           return createServerElement(item);
         } else {
