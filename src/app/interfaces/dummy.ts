@@ -12,7 +12,8 @@ export const dummyServer: Array<serverType> = [
       'Hoshii Miki',
     ],
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl sed ultricies ultrices, nunc nunc ultricies nunc, sed ultricies',
-    invite: 'https://example.com/invite/1'
+    invite: 'https://example.com/invite/1',
+    splash: 'https://dummyimage.com/100x100/4e4886.png'
   },
   {
     id: 2,
@@ -23,7 +24,8 @@ export const dummyServer: Array<serverType> = [
       'Shimamura Uzuki',
     ],
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl sed ultricies ultrices, nunc nunc ultricies nunc, sed ultricies',
-    invite: 'https://example.com/invite/2'
+    invite: 'https://example.com/invite/2',
+    splash: 'https://dummyimage.com/100x100/4e4886.png'
   }
 ];
 
