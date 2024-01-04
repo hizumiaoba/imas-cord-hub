@@ -12,4 +12,5 @@ export interface serverType {
   waifu: Array<string>;
   description: string;
   invite: string;
+  splash: string;
 }
