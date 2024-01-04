@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import { GridComponent } from "../GridComponent";
 import { baseApiUrl } from "@/app/utils";
 export default async function Home() {
-  const data = await fetch(`${baseApiUrl}/fansite`).then((res) => res.json());
+  const data = await fetch(`${baseApiUrl}/fansites`).then((res) => res.json());
 
   return (
     <Suspense fallback={<h1>Now loadning...</h1>}>

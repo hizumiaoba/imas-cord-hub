@@ -5,6 +5,7 @@ import { serverType } from "../interfaces/server.interface";
 import { baseApiUrl, selectIpColor } from "../utils";
 import { dummyFansite, dummyServer } from "../interfaces/dummy";
 import style from "@/app/css/about.module.css";
+import Image from "next/image";
 
 export const GridComponent = async ({
   type,
@@ -43,6 +44,7 @@ export const createServerElement = (item: serverType) => {
   return (
     <div key={item.id} className={sharedStyle.card}>
       <h3>{item.name}</h3>
+      <Image src={item.splash} alt={`Splash image for ${item.name} discord server.`}/>
       <p>{item.description}</p>
       <div className={sharedStyle.ip}>
         <span style={{ background: `${selectIpColor(item.ip)}` }}>

@@ -2,10 +2,12 @@ import pageStyle from "@/app/css/shared.module.css";
 import { Suspense } from "react";
 import { Gridset } from "./Gridset";
 import Link from "next/link";
-import { baseApiUrl } from "../utils";
+import {baseApiUrl, getRandomPickedArray} from "../utils";
+import {serverType} from "@/app/interfaces/server.interface";
 
 export const ServerList = async () => {
-  const arr = await fetch(`${baseApiUrl}/server/find/random?amount=2`).then((res) => res.json());
+  const arr = await fetch(`${baseApiUrl}/servers`).then((res) => res.json()) as Array<serverType>;
+  const randomPickedArr = getRandomPickedArray(arr, 1);
 
   return (
     <>
@@ -24,7 +26,7 @@ export const ServerList = async () => {
             </div>
           }
         >
-          <Gridset arr={arr} />
+          <Gridset arr={randomPickedArr} />
         </Suspense>
         <p>
           <Link href={"/detail/server"}>全て見てみる!</Link>

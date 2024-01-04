@@ -2,12 +2,13 @@ import pageStyle from "@/app/css/shared.module.css";
 import { Gridset } from "./Gridset";
 import { Suspense } from "react";
 import { baseApiUrl } from "../utils";
+import {serverType} from "@/app/interfaces/server.interface";
+import {fansiteType} from "@/app/interfaces/fansite.interface";
 
 export const Recent = async () => {
-  const arr = [
-    await fetch(`${baseApiUrl}/server/find/latest`).then((res) => res.json()),
-    await fetch(`${baseApiUrl}/fansite/find/latest`).then((res) => res.json()),
-  ];
+  const servers = await fetch(`${baseApiUrl}/servers`).then((res) => res.json()) as Array<serverType>
+  const fansites = await fetch(`${baseApiUrl}/fansites`).then((res) => res.json()) as Array<fansiteType>
+  const recent = [servers[0], fansites[0]];
 
   return (
     <div
@@ -25,7 +26,7 @@ export const Recent = async () => {
           </div>
         }
       >
-        <Gridset arr={arr} />
+        <Gridset arr={recent} />
       </Suspense>
     </div>
   );
