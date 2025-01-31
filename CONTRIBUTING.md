@@ -33,7 +33,7 @@ When submitting PRs, please make sure that:
   - Of course this is not required, but it would be nice to see what your changes look like.
 - Your PR is not a WIP (work in progress) PR.
   - Please set draft status to your PR if it is a WIP PR.
-- Your PR should point the `main` branch as the base branch.
+- Your PR should point the `trunk` branch as the base branch.
 
 ## How to Contribute
 
