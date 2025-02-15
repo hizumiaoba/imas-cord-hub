@@ -30,16 +30,15 @@ When submitting PRs, please make sure that:
   - this makes tracking and managing issues easier.
 - Your PR is not a duplicate of an existing PR.
 - Because this project is focused on the frontend, consider adding the screenshots of your changes.
-  - Of course this is not required, but it would be nice to see what your changes look like.
 - Your PR is not a WIP (work in progress) PR.
   - Please set draft status to your PR if it is a WIP PR.
-- Your PR should point the `main` branch as the base branch.
+- Your PR should point the `trunk` branch as the base branch.
 
 ## How to Contribute
 
 If you consider contributing to this project by submitting PRs, you can choose one of the following ways:
 
-- using DevContainers (recommended)
+- Using DevContainers (recommended)
 - Fork and make changes locally
 
 ### Using DevContainers
